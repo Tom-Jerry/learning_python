@@ -1,2 +1,1 @@
-msg = 'test the usage of vscode in python programming'
-print(msg)
+# -*- coding: utf-8 -*-
