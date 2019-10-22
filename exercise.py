@@ -128,7 +128,8 @@ while True:
         print("\nYou need to pay 10 dollars")
     else:
         print("\nYou need to pay 15 dollars")
-'''
+
+
 unconfirmed_users = ['alice', 'brain', 'cadance']
 confirmed_users = []
 
@@ -140,3 +141,98 @@ while unconfirmed_users:
 print("The following users has been confirmed:")
 for user in confirmed_users:
     print("user: " + user.title())
+
+pets = ['dog', 'cat', 'goldfish', 'rabbit', 'cat', 'cat']
+print(pets)
+while 'cat' in pets:
+    pets.remove('cat')
+
+print(pets)
+
+responses = {}
+goon = True
+while goon:
+    name = input("Please enter your name:")
+    response = input("What's your favorite mountain:")
+
+    responses[name] = response
+
+    ask = input("Let the next one answer the questions?(yes or no)")
+    if ask == 'no':
+        goon = False
+    
+print("results:")
+for name, response in responses.items():
+    print("name: " + name + " mountain: " + response)
+
+sandwich_orders = ['tuna', 'pastrami','fish', 'chicken', 'pastrami','beef','pastrami']
+while 'pastrami' in sandwich_orders:
+    sandwich_orders.remove('pastrami')
+
+print("There is no pastrami on sell")
+
+
+result = {}
+still = True
+while still:
+    name = input("What's your name:")
+    answer = input("Where is your favorite place for vacation:")
+    result[name] = answer
+    judge = input("next one (yes or no)?")
+    if judge == 'no':
+        still = False
+
+for n, p in result.items():
+    print("name: " + n + " vacation: " + p) 
+
+def make_shirt(size='L', picture='default'):
+    print("Thirt's size:    " + str(size))
+    print("Thirt's picture: " + str(picture))
+make_shirt()
+make_shirt('M')
+make_shirt('S', 'others')
+
+def describe_city(name, nation='China'):
+    print("\ncity:    " + name)
+    print("nation:  " + nation)
+
+describe_city('Reykjavik', 'Iceland')
+describe_city('Bristol', 'England')
+describe_city('BeiJing')
+
+def make_album(singer, name_album,count):
+    result = {}
+
+    result['singer'] = singer
+    result['name'] = name_album
+    result['count'] = count
+
+    return result
+
+print(make_album('Jay Chou', 'fantasy',7))
+
+
+def make_great(name):
+    res = []
+    for n in name:
+        n = n + " the Great"
+        res.append(n)
+    return res
+def show_magic(name):
+    print()
+    name = make_great(name)
+    for n in name:
+        print("magician name: " + n)
+show_magic(['lkx','wxy','hym'])
+
+def make_car(producer, num, **others):
+    car_info = {}
+    car_info['producer'] = producer
+    car_info['num'] = num
+    for key, value in others.items():
+        car_info[key] = value
+    return car_info
+
+new_car = make_car('subaru', 'outback', color='blue', package='two')
+print(new_car)
+'''
