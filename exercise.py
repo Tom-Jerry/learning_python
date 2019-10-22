@@ -129,3 +129,14 @@ while True:
     else:
         print("\nYou need to pay 15 dollars")
 '''
+unconfirmed_users = ['alice', 'brain', 'cadance']
+confirmed_users = []
+
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop()
+    print("Verifying user: " + current_user.title())
+    confirmed_users.append(current_user)
+
+print("The following users has been confirmed:")
+for user in confirmed_users:
+    print("user: " + user.title())
