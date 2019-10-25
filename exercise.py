@@ -289,8 +289,6 @@ class Admin(User):
     def show_privileges(self):
         print(self.privileges) 
  
-'''
-
 
 class Car():
     """ 汽车基类"""
@@ -342,7 +340,43 @@ class ElectricCar(Car):
     def fill_gas_tank(self):
         print("There is no tank in electric car!")
 
-my_tesla = ElectricCar('tesla', 'mode s', 2019)
-my_tesla.battery.get_range()
-my_tesla.battery.upgrade_battery()
-my_tesla.battery.get_range()
+
+from collections import OrderedDict
+favorite_languages = OrderedDict()
+
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'pyhton'
+
+for name, language in favorite_languages.items():
+    print(name.title() + " 's favorite language is: " +
+        language.title() + ".")
+
+from collections import OrderedDict
+vocabulary = OrderedDict()
+vocabulary['p'] = 'python'
+vocabulary['b'] = 'bash'
+vocabulary['c'] = 'cpp'
+vocabulary['s'] = 'shell'
+
+for s, word in vocabulary.items():
+    message = "start with " + s + " : " + word
+    print(message)
+
+from random import randint
+
+class Die():
+    def __init__(self, sides=6):
+        self.sides = 6
+    def roll_die(self):
+        return randint(1, self.sides)
+
+d = Die(30)
+t = 0
+while t < 10:
+    print(str(d.roll_die()))
+    t += 1
+
+'''
+

@@ -1,0 +1,8 @@
+in python you can use dict
+in python you can read file
+in python you can use class 
+in python you can use list
+in python you can use tuple
+
+interest
+fun
