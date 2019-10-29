@@ -378,5 +378,37 @@ while t < 10:
     print(str(d.roll_die()))
     t += 1
 
-'''
+from survey import AnonymousSurvey
+import unittest
 
+class TestAnonmyousSurvey(unittest.TestCase):
+    def test_store_single_response(self):
+        question = "What language did you first learn to speak?"
+        my_survey = AnonymousSurvey(question)
+        my_survey.store_response('English')
+        self.assertIn('English', my_survey.responses)
+
+unittest.main()
+
+'''
+import unittest
+class Employee():
+    def __init__(self, first, last, income):
+        self.first = first
+        self.last = last
+        self.income = income
+    
+    def give_raise(self, increment=5000):
+        self.income += increment
+    
+
+class EmployeeTest(unittest.TestCase):
+    def setUp(self):
+        self.employee = Employee('fan', 'mingrui', 5000)
+    def test_give_default_raise(self):
+        self.employee.give_raise() 
+        self.assertEqual(self.employee.income, 10000)
+    def test_give_custom_raise(self):
+        self.employee.give_raise(10000)
+        self.assertEqual(self.employee.income, 15000)
+unittest.main()
